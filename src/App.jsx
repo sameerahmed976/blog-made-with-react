@@ -8,6 +8,7 @@ import Post from "./components/Post";
 import SinglePost from "./components/SinglePost";
 import "./css/style.css";
 import dataBlock from "../data/db.js";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [data, setData] = useState(dataBlock);
@@ -18,7 +19,7 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route index element={<Blog data={data} />} />
+              <Route index element={<Blog data={data} setData={setData} />} />
               <Route
                 path="/post"
                 element={<Post data={data} setData={setData} />}
@@ -32,6 +33,7 @@ const App = () => {
             </Route>
           </Routes>
         </BrowserRouter>
+        <Footer />
       </div>
     </>
   );
