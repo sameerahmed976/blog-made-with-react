@@ -1,9 +1,12 @@
 import React from "react";
+import SingleBlog from "./SingleBlog.jsx";
 
-const Blog = () => {
+const Blog = ({ data }) => {
+  // console.log(data);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
+    // console.log(e);
   };
 
   return (
@@ -21,6 +24,11 @@ const Blog = () => {
           />
         </label>
       </form>
+      <section className="blog__data">
+        {data.map((item) => (
+          <SingleBlog {...item} key={item.id} />
+        ))}
+      </section>
     </main>
   );
 };

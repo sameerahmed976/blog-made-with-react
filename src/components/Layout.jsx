@@ -12,7 +12,7 @@ const Layout = () => {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? "active active__link" : "active link"
+                  isActive ? "active active__link" : " link"
                 }
               >
                 Home
