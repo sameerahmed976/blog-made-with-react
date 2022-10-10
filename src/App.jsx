@@ -8,11 +8,10 @@ import Post from "./components/Post";
 import SinglePost from "./components/SinglePost";
 import "./css/style.css";
 import dataBlock from "../data/db.js";
-import Footer from "./components/Footer";
 
 const App = () => {
   const [data, setData] = useState(dataBlock);
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <div className="app">
@@ -33,7 +32,6 @@ const App = () => {
             </Route>
           </Routes>
         </BrowserRouter>
-        <Footer />
       </div>
     </>
   );

@@ -25,7 +25,9 @@ const SinglePost = ({ data, setData }) => {
         <h1 className="single__post__heading">{title}</h1>
         <h2 className="single__post__date">{dateTime}</h2>
         <p className="single__post__body">{body}</p>
-        <button onClick={() => handleDelete(id)}>Delete Post</button>
+        <button onClick={() => handleDelete(id)} className="btn btn--delete">
+          Delete Post
+        </button>
       </section>
     </>
   );

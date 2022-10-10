@@ -161,7 +161,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
-  max-width: 500px;
+  max-width: 1170px;
   width: 90vw;
   margin: 0 auto;
   margin-top: 2rem;
@@ -198,6 +198,7 @@ a {
 
 .post {
   margin-top: 2rem;
+  min-height: calc(100vh - 11.1rem);
 }
 
 .post__heading {
@@ -270,14 +271,6 @@ a {
   font-size: var(--font-size-md);
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  padding: 1rem 0;
-  margin-top: 1rem;
-  background-color: whitesmoke;
-}
-
 .about {
   max-width: 500px;
   width: 90vw;
@@ -286,10 +279,26 @@ a {
   font-size: var(--font-size-base);
 }
 
-.footer__heading {
-  font-size: var(--font-size-sm);
-  text-align: center;
+.single__post {
+  min-height: calc(100vh - 10.1rem);
+}
+
+.single__post__heading {
+  font-size: var(--font-size-md);
+  text-align: left;
+  padding-left: 1rem;
+  padding: 1rem;
   text-transform: capitalize;
-  font-family: var(--heading-font);
-  font-weight: bold;
+}
+
+.single__post__date {
+  font-size: var(--font-size-base);
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.single__post__body {
+  margin: 0 auto;
+  width: 90vw;
+  margin-bottom: 2rem;
 }
